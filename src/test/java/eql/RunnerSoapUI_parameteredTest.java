@@ -1,17 +1,13 @@
 package eql;
 
 import com.eviware.soapui.impl.wsdl.WsdlProject;
-import com.eviware.soapui.impl.wsdl.WsdlTestSuite;
-import com.eviware.soapui.impl.wsdl.testcase.WsdlTestCase;
-import com.eviware.soapui.impl.wsdl.testcase.WsdlTestCaseRunner;
 import com.eviware.soapui.model.support.PropertiesMap;
 import com.eviware.soapui.model.testsuite.TestCase;
 import com.eviware.soapui.model.testsuite.TestCaseRunner;
 import com.eviware.soapui.model.testsuite.TestRunner;
-import com.eviware.soapui.model.testsuite.TestRunner.Status;
 import com.eviware.soapui.model.testsuite.TestSuite;
 import com.eviware.soapui.support.SoapUIException;
-import com.eviware.soapui.tools.SoapUITestCaseRunner;
+
 
 import org.apache.xmlbeans.XmlException;
 import org.junit.Test;
@@ -30,10 +26,10 @@ import java.util.List;
  * Unit test for simple App.
  */
 @RunWith(Parameterized.class)
-public class RunnerSoapUI_parametered {
+public class RunnerSoapUI_parameteredTest {
 	private String testCaseName;
 
-	public RunnerSoapUI_parametered(String testCaseName) {
+	public RunnerSoapUI_parameteredTest(String testCaseName) {
 		this.testCaseName = testCaseName;
 	}
 
@@ -55,7 +51,7 @@ public class RunnerSoapUI_parametered {
 	}
 
 	@Test
-	public void testSoapUITestCase() throws XmlException, IOException, SoapUIException {
+	public void testSoapUITestCaseTest() throws XmlException, IOException, SoapUIException {
 		System.out.println("Nom du cas de test SoapUI : " + testCaseName);
 		assertTrue(true);
 		assertTrue(runSoapUITestCase(this.testCaseName));
